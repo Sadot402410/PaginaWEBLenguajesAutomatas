@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenguajes y Automatas</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/full.render.js"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <button href="index.html">Página Principal</button>
+        <button onclick="toggleDropdown('parcial1', this)">Primer Parcial <span class="arrow">▶</span></button>
+        <div class="dropdown-content" id="parcial1">
+            <a href="pages/tema1.html">Tema 1: Modelo Discreto</a>
+            <a href="pages/tema2.html">Tema 2: Autómata Finito Determinista (AFD)</a>
+            <a href="pages/tema3.html">Tema 3: Definición Formal</a>
+            <a href="pages/tema4.html">Tema 4: Tabla de Transiciones</a>
+            <a href="pages/tema5.html">Tema 5: Función de Transición</a>
+            <a href="pages/tema6.html">Tema 6: Función de Transición Extendida</a>
+        </div>
+        <button onclick="toggleDropdown('parcial2', this)">Segundo Parcial <span class="arrow">▶</span></button>
+        <div class="dropdown-content" id="parcial2">
+            <a href="#">Tema 1</a>
+            <a href="#">Tema 2</a>
+        </div>
+        <button onclick="toggleDropdown('parcial3', this)">Tercer Parcial <span class="arrow">▶</span></button>
+        <div class="dropdown-content" id="parcial3">
+            <a href="#">Tema 1</a>
+            <a href="#">Tema 2</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>Lenguajes y Automatas</h1>
+        </div>
+        <!-- <p id="mathExpression">\[L = \{ w \in \{a,b\}^* \mid w = ab \}\]</p> -->
+        <!-- <div id="diagramContainer"></div> -->
+            <div class="portada">
+                <img src="img/uaeh.png" alt="Logo UAEH" class="logo">
+                <h1>Lenguajes y Automatas</h1>
+                <h2>Periodo Enero-Junio 2025</h2>
+                <p>Profesor: EDGAR ISRAEL GARCIA OTAMENDI</p>
+            </div>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

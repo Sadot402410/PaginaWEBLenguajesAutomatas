@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 3: Definición Formal</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/full.render.js"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <button>
+            <a href="../index.html" class="sidebar-button">Página Principal</a>
+        </button>
+        <button onclick="toggleDropdown('parcial1', this)">Primer Parcial <span class="arrow">▶</span></button>
+        <div class="dropdown-content" id="parcial1" style="display: block !important;">
+            <a href="../pages/tema1.html">Tema 1: Modelo Discreto</a>
+            <a href="../pages/tema2.html">Tema 2: Autómata Finito Determinista (AFD)</a>
+            <a href="../pages/tema3.html">Tema 3: Definición Formal</a>
+            <a href="../pages/tema4.html">Tema 4: Tabla de Transiciones</a>
+            <a href="../pages/tema5.html">Tema 5: Función de Transición</a>
+            <a href="../pages/tema6.html">Tema 6: Función de Transición Extendida</a>
+        </div>
+        <button onclick="toggleDropdown('parcial2', this)">Segundo Parcial <span class="arrow">▶</span></button>
+        <div class="dropdown-content" id="parcial2">
+            <a href="#">Tema 1</a>
+            <a href="#">Tema 2</a>
+        </div>
+        <button onclick="toggleDropdown('parcial3', this)">Tercer Parcial <span class="arrow">▶</span></button>
+        <div class="dropdown-content" id="parcial3">
+            <a href="#">Tema 1</a>
+            <a href="#">Tema 2</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>Tema 3: Definición Formal</h1>
+        </div>
+        <section>
+            <h2>Concepto</h2>
+            <p>La definición formal de un autómata finito determinista (AFD) es un conjunto matemático que describe su estructura y comportamiento.</p>
+        </section>
+        <section>
+            <h2>Notación</h2>
+            <p>Un AFD se define como una 5-tupla (Q, Σ, δ, q₀, F), donde:</p>
+            <table border="1" cellpadding="8" cellspacing="0" style="margin: 0 auto; text-align: center;">
+                <thead>
+                    <tr>
+                        <th>Símbolo</th>
+                        <th>Descripción</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Q</strong></td>
+                        <td>Conjunto finito de estados.</td>
+                        <td>{q₀, q₁}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Σ</strong></td>
+                        <td>Alfabeto finito de entrada.</td>
+                        <td>{0, 1}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>δ</strong></td>
+                        <td>Función de transición δ: Q × Σ → Q.</td>
+                        <td>
+                            δ(q₀, 0) = q₁<br>
+                            δ(q₀, 1) = q₀<br>
+                            δ(q₁, 0) = q₀<br>
+                            δ(q₁, 1) = q₁
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>q₀</strong></td>
+                        <td>Estado inicial.</td>
+                        <td>q₀</td>
+                    </tr>
+                    <tr>
+                        <td><strong>F</strong></td>
+                        <td>Conjunto de estados de aceptación.</td>
+                        <td>{q₀}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>AFD y Definicion formal (Ejemplo)</h2>
+            <p>Se hara la definicion formal del AFD anterior</p>
+            <div id="diagramAFD"></div><br>
+            <table border="1" cellpadding="8" cellspacing="0" style="margin: 0 auto; text-align: center;">
+                <tr>
+                    <th>Elemento</th>
+                    <th>Definición</th>
+                </tr>
+                <tr>
+                    <td><strong>Q</strong></td>
+                    <td>{ q₀, q₁ } — Conjunto de estados</td>
+                </tr>
+                <tr>
+                    <td><strong>Σ</strong></td>
+                    <td>{ 0, 1 } — Alfabeto de entrada</td>
+                </tr>
+                <tr>
+                    <td><strong>q₀</strong></td>
+                    <td>Estado inicial (par de ceros)</td>
+                </tr>
+                <tr>
+                    <td><strong>F</strong></td>
+                    <td>{ q₀ } — Conjunto de estados de aceptación</td>
+                </tr>
+                <tr>
+                    <td><strong>δ</strong></td>
+                    <td style="text-align: center;">
+                        δ(q₀, 0) = q₁ <br>
+                        δ(q₀, 1) = q₀ <br>
+                        δ(q₁, 0) = q₀ <br>
+                        δ(q₁, 1) = q₁
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <script src="../scripts/script.js"></script>
+</body>
+</html>

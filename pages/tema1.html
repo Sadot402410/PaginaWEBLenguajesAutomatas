@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tema 1: Modelo Discreto</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/full.render.js"></script>
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"
+    ></script>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <button>
+        <a href="../index.html" class="sidebar-button">Página Principal</a>
+      </button>
+      <button onclick="toggleDropdown('parcial1', this)">
+        Primer Parcial <span class="arrow">▶</span>
+      </button>
+      <div
+        class="dropdown-content"
+        id="parcial1"
+        style="display: block !important"
+      >
+        <a href="../pages/tema1.html">Tema 1: Modelo Discreto</a>
+        <a href="../pages/tema2.html"
+          >Tema 2: Autómata Finito Determinista (AFD)</a
+        >
+        <a href="../pages/tema3.html">Tema 3: Definición Formal</a>
+        <a href="../pages/tema4.html">Tema 4: Tabla de Transiciones</a>
+        <a href="../pages/tema5.html">Tema 5: Función de Transición</a>
+        <a href="../pages/tema6.html"
+          >Tema 6: Función de Transición Extendida</a
+        >
+      </div>
+      <button onclick="toggleDropdown('parcial2', this)">
+        Segundo Parcial <span class="arrow">▶</span>
+      </button>
+      <div class="dropdown-content" id="parcial2">
+        <a href="#">Tema 1</a>
+        <a href="#">Tema 2</a>
+      </div>
+      <button onclick="toggleDropdown('parcial3', this)">
+        Tercer Parcial <span class="arrow">▶</span>
+      </button>
+      <div class="dropdown-content" id="parcial3">
+        <a href="#">Tema 1</a>
+        <a href="#">Tema 2</a>
+      </div>
+    </div>
+    <div class="content">
+      <div class="header">
+        <h1>Tema 1: Modelo Discreto</h1>
+      </div>
+      <section>
+        <h2>Concepto</h2>
+        <p>
+          El modelo discreto es un sistema matemático donde los cambios ocurren
+          en valores finitos y bien definidos.
+        </p>
+      </section>
+      <section>
+        <h2>Notación</h2>
+        <p>
+          Formalmente, un modelo discreto puede representarse como un conjunto
+          de estados y transiciones entre ellos.
+        </p>
+      </section>
+      <section>
+        <h2>Diagrama de Transición</h2>
+        <p>
+          El siguiente diagrama representa un Modelo Discreto del Estado Civil
+          de una persona.
+        </p>
+          <div style="display: flex; gap: 20px">
+            <!-- Tabla de Estados -->
+            <table border="1" style="text-align: center; margin: 0 auto;">
+              <caption style="margin-bottom: 10px">
+                <strong>Estados</strong>
+              </caption>
+              <tr>
+                <th>Estado</th>
+              </tr>
+              <tr>
+                <td>Soltero</td>
+              </tr>
+              <tr>
+                <td>Casado</td>
+              </tr>
+              <tr>
+                <td>Divorciado</td>
+              </tr>
+              <tr>
+                <td>Viudo</td>
+              </tr>
+              <tr>
+                <td>Muerto</td>
+              </tr>
+            </table>
+
+            <!-- Tabla de Transiciones -->
+            <table border="1" style="text-align: center; margin: 0 auto;">
+              <caption style="margin-bottom: 10px">
+                <strong>Transiciones</strong>
+              </caption>
+              <tr>
+                <th>Abreviación</th>
+                <th>Transición</th>
+              </tr>
+              <tr>
+                <td>Cs</td>
+                <td>Casarse</td>
+              </tr>
+              <tr>
+                <td>Dv</td>
+                <td>Divorciarse</td>
+              </tr>
+              <tr>
+                <td>Ev</td>
+                <td>Enviudar</td>
+              </tr>
+              <tr>
+                <td>Mr</td>
+                <td>Morir</td>
+              </tr>
+            </table>
+          </div>
+        <div id="diagramModelDis" style="margin-top: 20px;"></div>
+      </section>
+    </div>
+    <script src="../scripts/script.js"></script>
+  </body>
+</html>

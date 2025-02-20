@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 6: Función de Transición Extendida</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/full.render.js"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <button>
+            <a href="../index.html" class="sidebar-button">Página Principal</a>
+        </button>
+        <button onclick="toggleDropdown('parcial1', this)">Primer Parcial <span class="arrow">▶</span></button>
+        <div class="dropdown-content" id="parcial1" style="display: block !important;">
+            <a href="../pages/tema1.html">Tema 1: Modelo Discreto</a>
+            <a href="../pages/tema2.html">Tema 2: Autómata Finito Determinista (AFD)</a>
+            <a href="../pages/tema3.html">Tema 3: Definición Formal</a>
+            <a href="../pages/tema4.html">Tema 4: Tabla de Transiciones</a>
+            <a href="../pages/tema5.html">Tema 5: Función de Transición</a>
+            <a href="../pages/tema6.html">Tema 6: Función de Transición Extendida</a>
+        </div>
+        <button onclick="toggleDropdown('parcial2', this)">Segundo Parcial <span class="arrow">▶</span></button>
+        <div class="dropdown-content" id="parcial2">
+            <a href="#">Tema 1</a>
+            <a href="#">Tema 2</a>
+        </div>
+        <button onclick="toggleDropdown('parcial3', this)">Tercer Parcial <span class="arrow">▶</span></button>
+        <div class="dropdown-content" id="parcial3">
+            <a href="#">Tema 1</a>
+            <a href="#">Tema 2</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>Tema 6: Función de Transición Extendida</h1>
+        </div>
+        <section>
+            <h2>Concepto</h2>
+            <p>La función de transición extendida permite determinar el estado final de un autómata después de procesar una cadena completa.</p>
+        </section>
+        <section>
+            <h2>Notación</h2>
+            <p>Se representa como δ*: Q × Σ* → Q, donde:</p>
+            <ul>
+                <li>Q es el conjunto de estados.</li>
+                <li>Σ* es el conjunto de todas las cadenas posibles sobre el alfabeto.</li>
+                <li>δ* es la función que aplica repetitivamente la función de transición estándar.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Ejemplo de Función de Transición Extendida</h2>
+            <p>Tomaremos como ejemplo el AFD anterior en el que la palabra tuviera un numero impar de a's y se aplicara la función de transición extendida</p>
+            <div id="diagramImparAs"></div>
+        </section>
+        <section class="math-container">
+            <h3>Función de Transición Extendida (δ\*)</h3>
+            <p>\[
+            \delta^*(q, \epsilon) = q \\
+            \delta^*(q, xa) = \delta(\delta^*(q, x), a)
+            \]</p>
+        </section>
+    </div>
+    <script src="../scripts/script.js"></script>
+</body>
+</html>

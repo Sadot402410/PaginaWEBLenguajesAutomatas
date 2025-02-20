@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 2: Autómata Finito Determinista (AFD)</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/full.render.js"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <button>
+            <a href="../index.html" class="sidebar-button">Página Principal</a>
+        </button>
+        <button onclick="toggleDropdown('parcial1', this)">Primer Parcial <span class="arrow">▶</span></button>
+        <div class="dropdown-content" id="parcial1" style="display: block !important;">
+            <a href="../pages/tema1.html">Tema 1: Modelo Discreto</a>
+            <a href="../pages/tema2.html">Tema 2: Autómata Finito Determinista (AFD)</a>
+            <a href="../pages/tema3.html">Tema 3: Definición Formal</a>
+            <a href="../pages/tema4.html">Tema 4: Tabla de Transiciones</a>
+            <a href="../pages/tema5.html">Tema 5: Función de Transición</a>
+            <a href="../pages/tema6.html">Tema 6: Función de Transición Extendida</a>
+        </div>
+        <button onclick="toggleDropdown('parcial2', this)">Segundo Parcial <span class="arrow">▶</span></button>
+        <div class="dropdown-content" id="parcial2">
+            <a href="#">Tema 1</a>
+            <a href="#">Tema 2</a>
+        </div>
+        <button onclick="toggleDropdown('parcial3', this)">Tercer Parcial <span class="arrow">▶</span></button>
+        <div class="dropdown-content" id="parcial3">
+            <a href="#">Tema 1</a>
+            <a href="#">Tema 2</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>Tema 2: Autómata Finito Determinista (AFD)</h1>
+        </div>
+        <section>
+            <h2>¿Qué es un Automata Finito (AF)?</h2>
+            <p>Un autómata finito es un modelo matemático de una máquina que acepta cadenas de un
+                lenguaje definido sobre un alfabeto A.<br><br>Consiste en un conjunto finito de estados y un conjunto
+                de transiciones entre esos estados, que dependen de los símbolos de la cadena de entrada.<br><br>El
+                autómata finito acepta una cadena x si la secuencia de transiciones correspondientes a los
+                símbolos de x conduce desde el estado inicial a un estado final</p>
+                <h4>Ejemplo</h4>
+                <p>Un Automata Finito bajo el alfabeto {0,1} en el que acepta cualquier valor binario que termina en dígito 1.</p>
+                <div id="diagramAF"></div>
+        </section>
+        <section>
+            <h2>¿Qué es un Automata Finito Determinista (AFD)?</h2>
+            <p>Si para todo estado del autómata existe como máximo una transición definida para cada
+                símbolo del alfabeto, se dice que el autómata es determinístico (AFD)</p>
+                <h4>Ejemplo</h4>
+                <p>Este autómata acepta cadenas binarias que tienen un número par de ceros.</p>
+                <div id="diagramAFD"></div>
+        </section>
+    </div>
+    <script src="../scripts/script.js"></script>
+</body>
+</html>
