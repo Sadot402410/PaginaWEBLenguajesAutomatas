@@ -61,7 +61,25 @@
             <p>\[
             \delta^*(q, \epsilon) = q \\
             \delta^*(q, xa) = \delta(\delta^*(q, x), a)
+            \]</p><br>
+            <h3>Explicación</h3>
+            <p>\[\delta^*(q, \epsilon) = q\] Se explica que si la cadena es vacía (ε), el autómata permanece en el estado actual q.</p>
+            <p>\[\delta^*(q, xa) = \delta(\delta^*(q, x), a)\] Si la cadena es xa (donde x es un prefijo y a el último símbolo), primero se procesa x y luego se aplica la transición con a.</p><br>
+        </section>
+        <section class="math-container">
+            <h3>Ejemplo de Aplicación de δ\* con la palabra "aaba"</h3>
+            <p>\[
+            \begin{align*}
+            \delta^*(q_0, aaba) &= \delta(\delta^*(q_0, aab), a) \\
+            &= \delta(\delta(\delta^*(q_0, aa), b), a) \\
+            &= \delta(\delta(\delta(\delta^*(q_0, a), a), b), a) \\
+            &= \delta(\delta(\delta(q_1, a), b), a) \\
+            &= \delta(\delta(q_0, b), a) \\
+            &= \delta(q_0, a) \\
+            &= q_1
+            \end{align*}
             \]</p>
+            <p><strong>Resultado Final:</strong> q₁ (Estado de aceptación)</p>
         </section>
     </div>
     <script src="../scripts/script.js"></script>
